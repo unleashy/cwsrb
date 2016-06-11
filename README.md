@@ -1,3 +1,4 @@
+[![Gem](https://img.shields.io/gem/v/cwsrb.svg)](https://rubygems.org/gems/cwsrb)
 [![Build Status](https://travis-ci.org/unleashy/cwsrb.svg?branch=master)](https://travis-ci.org/unleashy/cwsrb)
 
 # CWSrb
