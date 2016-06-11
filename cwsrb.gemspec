@@ -21,10 +21,10 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'httparty'
 
-  spec.required_ruby_version = '~> 2.1.0'
+  spec.required_ruby_version = '>= 2.1.0'
 
   spec.add_development_dependency 'bundler', '~> 1.12'
   spec.add_development_dependency 'rake',    '~> 10.0'
   spec.add_development_dependency 'rspec',   '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.39.0', require: false
+  spec.add_development_dependency 'rubocop', '~> 0.40.0'
 end
