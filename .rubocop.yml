@@ -1,0 +1,11 @@
+Metrics/LineLength:
+  Max: 120
+
+# TODO: documentation (I SWEAR I'LL DO IT SOMEDAY)
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'lib/cwsrb.rb'
+    - 'lib/cwsrb/api.rb'
+    - 'lib/cwsrb/helpers.rb'

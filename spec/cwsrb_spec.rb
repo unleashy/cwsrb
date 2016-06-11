@@ -1,3 +1,5 @@
+# TODO: this whole bullshit
+
 require 'spec_helper'
 
 describe Cwsrb do

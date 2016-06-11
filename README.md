@@ -8,7 +8,7 @@ Cwsrb is a simple API wrapper for [ConWorkShop](http://conworkshop.com).
 
 ## Installation
 
-Check the [Development section](https://github.com/unleashy/cwsrb). I'll probably put this in [rubygems.org](https://rubygems.org) later.
+Check the [Development section](https://github.com/unleashy/cwsrb#development). I'll probably put this in [rubygems.org](https://rubygems.org) later.
 
 ## Usage
 
@@ -22,7 +22,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/unleashy/cwsrb.
+Bug reports and pull requests are welcome on GitHub at https://github.com/unleashy/cwsrb. Don't forget to use rubocop!
 
 ## License
 

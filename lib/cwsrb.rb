@@ -4,5 +4,4 @@ require 'cwsrb/helpers'
 require 'cwsrb/api'
 
 module Cwsrb
-
 end

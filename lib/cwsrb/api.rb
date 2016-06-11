@@ -18,22 +18,19 @@ module Cwsrb
       response = self.class.get("/api?f=USER_KARMA&USER=#{usr}")
 
       # Check if any errors occurred
-      if response['err_idx'] > 0
-        raise Cwsrb::APIError, response['err_msg']
-      else
-        response['out']
-      end
+      Cwsrb::Helpers.check_for_errors(response)
+
+      response['out']
     end
 
     def get_user(val)
       usr = Cwsrb::Helpers.resolve(val)
       response = self.class.get("/api?f=USER&USER=#{usr}")
 
-      if response['err_idx'] > 0
-        raise Cwsrb::APIError, response['err_msg']
-      else
-        response['out']
-      end
+      # Check if any errors occurred
+      Cwsrb::Helpers.check_for_errors(response)
+
+      response['out']
     end
   end
 end
