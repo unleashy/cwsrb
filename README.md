@@ -1,6 +1,8 @@
-# Cwsrb
+[![Build Status](https://travis-ci.org/unleashy/cwsrb.svg?branch=master)](https://travis-ci.org/unleashy/cwsrb)
 
-Cwsrb is a simple API wrapper for [ConWorkShop](http://conworkshop.com).
+# CWSrb
+
+CWSrb is a simple API wrapper for [ConWorkShop](http://conworkshop.com).
 
 ## Dependencies
 
