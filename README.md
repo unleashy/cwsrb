@@ -10,11 +10,24 @@ CWSrb is a simple API wrapper for [ConWorkShop](http://conworkshop.com).
 
 ## Installation
 
-Check the [Development section](https://github.com/unleashy/cwsrb#development). I'll probably put this in [rubygems.org](https://rubygems.org) later.
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'cwsrb'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install cwsrb
 
 ## Usage
 
-... TODO ...
+TODO
+(I swear I'll fill this out)
 
 ## Development
 
