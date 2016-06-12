@@ -5,7 +5,7 @@ module Cwsrb
   #   for all other CWSrb's error classes.
   Error = Class.new(RuntimeError)
 
-  # Raised when a general APIError occurs.
+  # Raised when a general API error occurs.
   APIError = Class.new(Error)
 
   # @!endgroup

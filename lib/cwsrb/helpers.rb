@@ -17,7 +17,7 @@ module Cwsrb
     # Verifies if the response has any errors, and if so, raises a `APIError`.
     # @param response [Hash<String, String>] the response hash to check for errors
     # @raise [APIError] if any errors are detected in the response
-    # @return [void] _dust_
+    # @return [void]
     def check_for_errors(response)
       raise Cwsrb::APIError, response['err_msg'] if response['err_idx'] > 0
     end

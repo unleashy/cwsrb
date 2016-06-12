@@ -13,7 +13,7 @@ module Cwsrb
     # Initialize a new instance of the API object, with a mandatory custom User-Agent for HTTP requests.
     # This sets the User-Agent header for all subsequent requests, with your custom User-Agent and CWSrb's User-Agent.
     # @param user_agent [String] The User-Agent to use with HTTP requests. Please use a descriptive one.
-    # @return [void] _dust_
+    # @return [API] a new instance of `API`
     def initialize(user_agent)
       self.class.headers 'User-Agent' =>
                              "#{user_agent} CWSrb/#{Cwsrb::VERSION} (#{RUBY_ENGINE}/#{RUBY_VERSION}p#{RUBY_PATCHLEVEL})"
