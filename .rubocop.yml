@@ -1,11 +1,35 @@
-Metrics/LineLength:
-  Max: 120
+# no metrics
+Metrics/AbcSize:
+  Enabled: false
 
-# TODO: documentation (I SWEAR I'LL DO IT SOMEDAY)
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
-    - 'test/**/*'
-    - 'lib/cwsrb.rb'
-    - 'lib/cwsrb/api.rb'
-    - 'lib/cwsrb/helpers.rb'
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'

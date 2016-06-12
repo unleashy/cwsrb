@@ -1,3 +1,4 @@
 module Cwsrb
-  VERSION = '0.2.0'.freeze
+  # The current version of CWSrb.
+  VERSION = '0.3.0'.freeze
 end

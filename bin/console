@@ -3,5 +3,9 @@
 require 'bundler/setup'
 require 'cwsrb'
 
+# Set up API object
+api = Cwsrb::API.new('CWSrb Testing Console')
+puts 'The Cwsrb::API object was initialized to the `api` variable.'
+
 require 'irb'
 IRB.start
