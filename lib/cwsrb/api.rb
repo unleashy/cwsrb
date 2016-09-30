@@ -1,7 +1,7 @@
 require 'httparty'
 require 'cwsrb/errors'
 require 'cwsrb/helpers'
-require 'cwsrb/user'
+require 'cwsrb/data'
 
 module Cwsrb
   # This is the main class from which you use CWSrb.
