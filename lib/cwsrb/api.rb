@@ -60,7 +60,7 @@ module Cwsrb
           owners: response['OWNERS'],
           overview: response['OVERVIEW'],
           public: response['PUBLIC'],
-          status: response['STATUS'],
+          status: get_lang_status(response['STATUS']),
           registered: Time.at(response['REGISTERED']),
           word_count: response['WORD_COUNT']
       }
