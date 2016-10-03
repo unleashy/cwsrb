@@ -56,7 +56,7 @@ module Cwsrb
           name: response['NAME'],
           native_name: response['NATIVE_NAME'],
           ipa: response['IPA'],
-          type: response['TYPE'],
+          type: get_lang_type(response['TYPE']),
           owners: response['OWNERS'],
           overview: response['OVERVIEW'],
           public: response['PUBLIC'],
