@@ -81,5 +81,19 @@ module Cwsrb
 
       Cwsrb::Language::Type.new(attribs)
     end
+
+    def get_lang_status(val)
+      response = self.class.get("/api/LANG/STATUS/#{val}")
+
+      Cwsrb::Helpers.check_for_errors(response)
+
+      response = response['out']
+      attribs = {
+          code: response['STATUS'].upcase,
+          desc: response['DESC']
+      }
+
+      Cwsrb::Language::Status.new(attribs)
+    end
   end
 end
