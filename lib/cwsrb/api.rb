@@ -8,7 +8,7 @@ module Cwsrb
   # It includes `HTTParty` with a `base_uri` of "http://conworkshop.com".
   class API
     include HTTParty
-    base_uri 'http://conworkshop.com'
+    base_uri 'conworkshop.com'
 
     # Initialize a new instance of the API object, with a mandatory custom User-Agent for HTTP requests.
     # This sets the User-Agent header for all subsequent requests, with your custom User-Agent and CWSrb's User-Agent.
@@ -27,7 +27,7 @@ module Cwsrb
       usr = Cwsrb::Helpers.resolve(val)
 
       # First general info
-      response = self.class.get("/api?f=USER&USER=#{usr}")
+      response = self.class.get("/api/USER/#{usr}")
 
       # Check if any errors occurred
       Cwsrb::Helpers.check_for_errors(response)
@@ -38,17 +38,9 @@ module Cwsrb
         name: response['USER_NAME'],
         gender: response['USER_GENDER'],
         bio: response['USER_BIO'],
-        country: response['USER_COUNTRY']
+        country: response['USER_COUNTRY'],
+        karma: response['KARMA']
       }
-
-      # Now karma
-      response = self.class.get("/api?f=USER_KARMA&USER=#{usr}")
-
-      # Check if any errors occurred
-      Cwsrb::Helpers.check_for_errors(response)
-
-      response = response['out']
-      attribs[:karma] = [response['KARMA_UP'], response['KARMA_DOWN']]
 
       Cwsrb::User.new(attribs)
     end
