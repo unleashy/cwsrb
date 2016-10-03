@@ -58,6 +58,20 @@ module Cwsrb
       end
     end
 
+    class Status
+      attr_reader :code
+      attr_reader :desc
+
+      def initialize(code: nil, desc: '')
+        @code = code
+        @desc = desc
+      end
+
+      def inspect
+        "<Language::Status code=#{@code} desc=#{@desc}>"
+      end
+    end
+
     attr_reader :code
     attr_reader :name
     attr_reader :native_name
