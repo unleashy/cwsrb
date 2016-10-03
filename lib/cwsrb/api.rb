@@ -44,5 +44,28 @@ module Cwsrb
 
       Cwsrb::User.new(attribs)
     end
+
+    def get_lang(val)
+      response = self.class.get("/api/LANG/#{val}")
+
+      Cwsrb::Helpers.check_for_errors(response)
+
+      response = response['out']
+      attribs = {
+          code: response['CODE'],
+          name: response['NAME'],
+          native_name: response['NATIVE_NAME'],
+          ipa: response['IPA'],
+          type: response['TYPE'],
+          owners: response['OWNERS'],
+          overview: response['OVERVIEW'],
+          public: response['PUBLIC'],
+          status: response['STATUS'],
+          registered: Time.at(response['REGISTERED']),
+          word_count: response['WORD_COUNT']
+      }
+
+      Cwsrb::Language.new(attribs)
+    end
   end
 end
