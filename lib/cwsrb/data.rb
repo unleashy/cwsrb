@@ -101,10 +101,10 @@ module Cwsrb
     end
 
     def inspect
-      "<Language code=#{@code} name=#{@name} native_name=#{@native_name} ipa=#{@ipa} "
-      "type=#{@type} owners=#{@owners} overview=#{@overview} "
-      "public=#{@public} status=#{@status} registered=#{@registered} "
-      "word_count=#{@word_count}>"
+      "<Language code=#{@code} name=#{@name} native_name=#{@native_name} " \
+        "ipa=#{@ipa} type=#{@type} owners=#{@owners} overview=#{@overview} " \
+        "public=#{@public} status=#{@status} registered=#{@registered} " \
+        "word_count=#{@word_count}>"
     end
   end
 end

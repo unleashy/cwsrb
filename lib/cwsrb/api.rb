@@ -52,17 +52,17 @@ module Cwsrb
 
       response = response['out']
       attribs = {
-          code: response['CODE'],
-          name: response['NAME'],
-          native_name: response['NATIVE_NAME'],
-          ipa: response['IPA'],
-          type: get_lang_type(response['TYPE']),
-          owners: response['OWNERS'],
-          overview: response['OVERVIEW'],
-          public: response['PUBLIC'],
-          status: get_lang_status(response['STATUS']),
-          registered: Time.at(response['REGISTERED']),
-          word_count: response['WORD_COUNT']
+        code: response['CODE'],
+        name: response['NAME'],
+        native_name: response['NATIVE_NAME'],
+        ipa: response['IPA'],
+        type: get_lang_type(response['TYPE']),
+        owners: response['OWNERS'],
+        overview: response['OVERVIEW'],
+        public: response['PUBLIC'],
+        status: get_lang_status(response['STATUS']),
+        registered: Time.at(response['REGISTERED']),
+        word_count: response['WORD_COUNT']
       }
 
       Cwsrb::Language.new(attribs)
@@ -75,8 +75,8 @@ module Cwsrb
 
       response = response['out']
       attribs = {
-          code: response['TYPE'].upcase,
-          desc: response['DESC']
+        code: response['TYPE'].upcase,
+        desc: response['DESC']
       }
 
       Cwsrb::Language::Type.new(attribs)
@@ -89,14 +89,14 @@ module Cwsrb
 
       response = response['out']
       attribs = {
-          code: response['STATUS'].upcase,
-          desc: response['DESC']
+        code: response['STATUS'].upcase,
+        desc: response['DESC']
       }
 
       Cwsrb::Language::Status.new(attribs)
     end
 
-    def get_api_version
+    def api_version
       self.class.get('/api')['api_ver']
     end
   end
