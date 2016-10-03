@@ -42,4 +42,41 @@ module Cwsrb
       "<User id=#{@id} name=#{@name} gender=#{gender} bio=#{bio} country=#{country} karma=#{karma}>"
     end
   end
+
+  class Language
+    attr_reader :code
+    attr_reader :name
+    attr_reader :native_name
+    attr_reader :ipa
+    attr_reader :type
+    attr_reader :owners
+    attr_reader :overview
+    attr_reader :public
+    attr_reader :status
+    attr_reader :registered
+    attr_reader :word_count
+
+    def initialize(code: nil, name: nil, native_name: nil, ipa: nil, type: nil,
+                   owners: [], overview: '', public: true, status: '',
+                   registered: Time.now, word_count: 0)
+      @code = code
+      @name = name
+      @native_name = native_name
+      @ipa = ipa
+      @type = type
+      @owners = owners
+      @overview = overview
+      @public = public
+      @status = status
+      @registered = registered
+      @word_count = word_count
+    end
+
+    def inspect
+      "<Language code=#{@code} name=#{@name} native_name=#{@native_name} ipa=#{@ipa} "
+      "type=#{@type} owners=#{@owners} overview=#{@overview} "
+      "public=#{@public} status=#{@status} registered=#{@registered} "
+      "word_count=#{@word_count}>"
+    end
+  end
 end
