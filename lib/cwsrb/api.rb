@@ -24,7 +24,7 @@ module Cwsrb
     # @return [User] The user queried for
     # @raise [APIError] If any error ocurred while querying for that user
     def get_user(val)
-      usr = Cwsrb::Helpers.resolve(val)
+      usr = URI.encode(Cwsrb::Helpers.resolve(val))
 
       # First general info
       response = self.class.get("/api/USER/#{usr}")
@@ -46,6 +46,7 @@ module Cwsrb
     end
 
     def get_lang(val)
+      val = URI.encode(val)
       response = self.class.get("/api/LANG/#{val}")
 
       Cwsrb::Helpers.check_for_errors(response)
@@ -69,6 +70,7 @@ module Cwsrb
     end
 
     def get_lang_type(val)
+      val = URI.encode(val)
       response = self.class.get("/api/LANG/TYPE/#{val}")
 
       Cwsrb::Helpers.check_for_errors(response)
@@ -83,6 +85,7 @@ module Cwsrb
     end
 
     def get_lang_status(val)
+      val = URI.encode(val)
       response = self.class.get("/api/LANG/STATUS/#{val}")
 
       Cwsrb::Helpers.check_for_errors(response)
