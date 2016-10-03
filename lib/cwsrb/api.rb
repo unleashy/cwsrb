@@ -67,5 +67,19 @@ module Cwsrb
 
       Cwsrb::Language.new(attribs)
     end
+
+    def get_lang_type(val)
+      response = self.class.get("/api/LANG/TYPE/#{val}")
+
+      Cwsrb::Helpers.check_for_errors(response)
+
+      response = response['out']
+      attribs = {
+          code: response['TYPE'].upcase,
+          desc: response['DESC']
+      }
+
+      Cwsrb::Language::Type.new(attribs)
+    end
   end
 end
