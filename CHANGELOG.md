@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.1
+* Fixed an error with the URIs not being encoded
+
 ## 0.4.0
 * Add new `Language` class and related subclasses `Type` and `Status` that are returned for calls to `API#get_lang`,
   `API#get_lang_type` and `API#get_lang_status`, respectively
