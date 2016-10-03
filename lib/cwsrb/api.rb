@@ -97,11 +97,7 @@ module Cwsrb
     end
 
     def get_api_version
-      response = self.class.get('/api')
-
-      Cwsrb::Helpers.check_for_errors(response)
-
-      response['api_ver']
+      self.class.get('/api')['api_ver']
     end
   end
 end
