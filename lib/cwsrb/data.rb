@@ -44,6 +44,20 @@ module Cwsrb
   end
 
   class Language
+    class Type
+      attr_reader :code
+      attr_reader :desc
+
+      def initialize(code: nil, desc: '')
+        @code = code
+        @desc = desc
+      end
+
+      def inspect
+        "<Language::Type code=#{@code} desc=#{@desc}>"
+      end
+    end
+
     attr_reader :code
     attr_reader :name
     attr_reader :native_name
