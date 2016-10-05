@@ -22,7 +22,7 @@ module Cwsrb
     # Gets a ConWorkShop's user's info plus karma counts.
     # @param val [String, Integer] The user's name or ID.
     # @return [User] The user queried for
-    # @raise [APIError] If any error ocurred while querying for that user
+    # @raise [APIError] If any error occurred while querying for that user
     def get_user(val)
       usr = URI.encode(Cwsrb::Helpers.resolve(val))
 
