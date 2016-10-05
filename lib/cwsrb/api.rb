@@ -45,6 +45,10 @@ module Cwsrb
       Cwsrb::User.new(attribs)
     end
 
+    # Gets a ConWorkShop's language's info plus karma counts.
+    # @param val [String] The language's three-character code.
+    # @return [Language] The language queried for.
+    # @raise [APIError] If any error occurred while querying for that language
     def get_lang(val)
       val = URI.encode(val)
       response = self.class.get("/api/LANG/#{val}")
@@ -70,6 +74,10 @@ module Cwsrb
       Cwsrb::Language.new(attribs)
     end
 
+    # Translates a language type code to a Language::Type class.
+    # @param val [String] The one-character code.
+    # @return [Language::Type] The translated language type.
+    # @raise [APIError] If any error occurred while translating.
     def get_lang_type(val)
       val = URI.encode(val)
       response = self.class.get("/api/LANG/TYPE/#{val}")
@@ -85,6 +93,10 @@ module Cwsrb
       Cwsrb::Language::Type.new(attribs)
     end
 
+    # Translates a language status code to a Language::Status class.
+    # @param val [String] The one-character code.
+    # @return [Language::Status] The translated language status.
+    # @raise [APIError] If any error occurred while translating.
     def get_lang_status(val)
       val = URI.encode(val)
       response = self.class.get("/api/LANG/STATUS/#{val}")
@@ -100,6 +112,8 @@ module Cwsrb
       Cwsrb::Language::Status.new(attribs)
     end
 
+    # Gets the API version provided by the API.
+    # @return [String] The returned API version.
     def api_version
       self.class.get('/api')['api_ver']
     end
