@@ -1,4 +1,6 @@
 module Cwsrb
+  CWS_BASE = 'http://conworkshop.com'
+
   # The User class represents a member of ConWorkShop.
   class User
     # @return [String, Integer] The User's ID
@@ -34,6 +36,10 @@ module Cwsrb
       @bio = bio
       @country = country
       @karma = karma
+    end
+
+    def generate_link
+      CWS_BASE + "/view_profile.php?m=#{@id}"
     end
 
     # @overload inspect
@@ -98,6 +104,10 @@ module Cwsrb
       @status = status
       @registered = registered
       @word_count = word_count
+    end
+
+    def generate_link
+      CWS_BASE + "/view_language.php?l=#{@code}"
     end
 
     def inspect
