@@ -89,10 +89,11 @@ module Cwsrb
     attr_reader :status
     attr_reader :registered
     attr_reader :word_count
+    attr_reader :karma
 
     def initialize(code: nil, name: nil, native_name: nil, ipa: nil, type: nil,
                    owners: [], overview: '', public: true, status: '',
-                   registered: Time.now, word_count: 0)
+                   registered: Time.now, word_count: 0, karma: [0, 0])
       @code = code
       @name = name
       @native_name = native_name
@@ -104,6 +105,7 @@ module Cwsrb
       @status = status
       @registered = registered
       @word_count = word_count
+      @karma = karma
     end
 
     def generate_link
@@ -114,7 +116,7 @@ module Cwsrb
       "<Language code=#{@code} name=#{@name} native_name=#{@native_name} " \
         "ipa=#{@ipa} type=#{@type} owners=#{@owners} overview=#{@overview} " \
         "public=#{@public} status=#{@status} registered=#{@registered} " \
-        "word_count=#{@word_count}>"
+        "word_count=#{@word_count} karma=#{@karma}>"
     end
   end
 end

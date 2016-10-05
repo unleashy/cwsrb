@@ -63,7 +63,8 @@ module Cwsrb
         public: response['PUBLIC'],
         status: get_lang_status(response['STATUS']),
         registered: Time.at(response['REGISTERED']),
-        word_count: response['WORD_COUNT']
+        word_count: response['WORD_COUNT'],
+        karma: response['KARMA']
       }
 
       Cwsrb::Language.new(attribs)
