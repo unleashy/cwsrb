@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+* Added `#generate_link` to both `User` and `Language` that returns the corresponding CWS link to it.
+* Added a `karma` attribute to `Language` which represents the karma values for the language.
+* Updated documentation.
+
 ## 0.4.1
 * Fixed an error with the URIs not being encoded
 
